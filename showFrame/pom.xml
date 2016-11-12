@@ -33,7 +33,10 @@
 		<module>showFrame-web</module>
 		<module>showFrame-customer</module>
 		<module>showFrame-goods</module>
-	</modules>
+		<module>showFrame-car</module>
+		<module>showFrame-order</module>
+		<module>showFrame-store</module>
+		</modules>
 		</profile>
 	</profiles>
 </project>
