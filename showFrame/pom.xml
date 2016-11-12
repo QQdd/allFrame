@@ -30,10 +30,8 @@
 		<profile>
 			<modules>
 		<module>showFrame-common</module>
-		<module>showFrame-goodsmng</module>
 		<module>showFrame-web</module>
 		<module>showFrame-customer</module>
-		<module>showFrame-goodweb</module>
 		<module>showFrame-goods</module>
 	</modules>
 		</profile>
