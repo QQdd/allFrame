@@ -34,9 +34,8 @@
 		<module>showFrame-web</module>
 		<module>showFrame-customer</module>
 		<module>showFrame-goodweb</module>
+		<module>showFrame-goods</module>
 	</modules>
 		</profile>
 	</profiles>
-
-	
 </project>
