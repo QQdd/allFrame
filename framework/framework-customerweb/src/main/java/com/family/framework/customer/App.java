@@ -1,4 +1,4 @@
-package com.family.framework.common;
+package com.family.framework.customer;
 
 /**
  * Hello world!

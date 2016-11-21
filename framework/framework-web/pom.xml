@@ -14,7 +14,7 @@
 	<packaging>war</packaging>
 	<name>framework-web Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<dependencies>
 		<!-- 动态代理 -->
 		<dependency>
@@ -22,11 +22,11 @@
 			<artifactId>cglib</artifactId>
 			<version>3.2.4</version>
 		</dependency>
-			<dependency>
-    <groupId>asm</groupId>
-    <artifactId>asm</artifactId>
-    <version>3.3.1</version>
-</dependency>
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>3.3.1</version>
+		</dependency>
 		<!-- Springmvc相关jar -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -75,6 +75,11 @@
 			<artifactId>spring-tx</artifactId>
 			<version>4.3.3.RELEASE</version>
 		</dependency>
+		<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>4.3.4.RELEASE</version>
+</dependency>
 		<!-- mybatis jar -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -127,23 +132,27 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId><!-- getset -->
+			<version>1.16.10</version>
+		</dependency>
 		<!-- jetty -->
 		<dependency>
-    <groupId>org.eclipse.jetty</groupId>
-    <artifactId>jetty-server</artifactId>
-    <version>9.3.14.v20161028</version>
-</dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<version>9.3.14.v20161028</version>
+		</dependency>
 		<dependency>
-    <groupId>org.eclipse.jetty</groupId>
-    <artifactId>jetty-webapp</artifactId>
-    <version>9.3.14.v20161028</version>
-</dependency>
-<dependency>
-    <groupId>org.eclipse.jetty</groupId>
-    <artifactId>jetty-jsp</artifactId>
-    <version>9.2.19.v20160908</version>
-</dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-webapp</artifactId>
+			<version>9.3.14.v20161028</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-jsp</artifactId>
+			<version>9.2.19.v20160908</version>
+		</dependency>
 		<!-- 子模块引入 -->
 		<dependency>
 			<groupId>com.family</groupId>
@@ -209,28 +218,28 @@
 					</overlays>
 				</configuration>
 			</plugin>
-			
-            <!-- jetty插件 -->  
-            <plugin>  
-                <groupId>org.mortbay.jetty</groupId>  
-                <artifactId>maven-jetty-plugin</artifactId>  
-                <version>6.1.21</version>  
-                
-                <configuration>  
 
-	<!--         添加这行<webDefaultXml>src/main/resources/jetty/webdefault.xml</webDefaultXml>   -->
-				<!--可以边修改边访问-->
+			<!-- jetty插件 -->
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.21</version>
 
-			<!-- <webAppSourceDirectory>src/main/webapp</webAppSourceDirectory>   -->
-                    <scanIntervalSeconds>3</scanIntervalSeconds>  
-                    <contextPath>/</contextPath>  
-                    <connectors>  
-                        <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">  
-                            <port>8088</port>  
-                        </connector>  
-                    </connectors>  
-                </configuration>  
-            </plugin>  
+				<configuration>
+
+					<!-- 添加这行<webDefaultXml>src/main/resources/jetty/webdefault.xml</webDefaultXml> -->
+					<!--可以边修改边访问 -->
+
+					<!-- <webAppSourceDirectory>src/main/webapp</webAppSourceDirectory> -->
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<contextPath>/web</contextPath>
+					<connectors>
+						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+							<port>8088</port>
+						</connector>
+					</connectors>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
