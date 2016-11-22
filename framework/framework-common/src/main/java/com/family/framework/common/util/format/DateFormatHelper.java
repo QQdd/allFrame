@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DateFormatHelper {
-	
+	//可以使用注解的格式化
 	private DateFormatHelper(){}
 	private final static String FORMAT_STR = "yyyy-MM-dd HH:mm:ss";
 	public static String long2str(long time){
