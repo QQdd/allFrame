@@ -7,8 +7,8 @@
 	</typeAliases>
 	<plugins>
 		<plugin interceptor="com.family.framework.common.pageutil.PagePlugin">
-			<property name="dialect" value="mysql"/><!-- 数据库类型 -->
-			<property name="pageSqlId" value=".*Page.*"/><!-- 拦截page的方法 -->
+			<property name="dialect" value="mysql"/>
+			<property name="pageSqlId" value=".*Page.*"/>
 		</plugin>
 	</plugins>
 </configuration> 
