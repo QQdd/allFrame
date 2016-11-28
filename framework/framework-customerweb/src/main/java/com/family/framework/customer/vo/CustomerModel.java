@@ -1,52 +1,64 @@
 package com.family.framework.customer.vo;
 
-import com.family.framework.common.vo.BaseModel;
-public class CustomerModel  extends BaseModel{
-		private String customerId;
-		private String pwd;
-		private String showName;
-		private String trueName;
-		private String registerTime;
-		
-		public String getCustomerId() {
-			return customerId;
-		}
-		public void setCustomerId(String customerId) {
-			this.customerId = customerId;
-		}
-		public String getPwd() {
-			return pwd;
-		}
-		public void setPwd(String pwd) {
-			this.pwd = pwd;
-		}
-		public String getShowName() {
-			return showName;
-		}
-		public void setShowName(String showName) {
-			this.showName = showName;
-		}
-		public String getTrueName() {
-			return trueName;
-		}
-		public void setTrueName(String trueName) {
-			this.trueName = trueName;
-		}
-		public String getRegisterTime() {
-			return registerTime;
-		}
-		public void setRegisterTime(String registerTime) {
-			this.registerTime = registerTime;
-		}
-		
-		
-		@Override
-		public String toString() {
-			return "CustomerModel [uuid=" + getUuid() + ", customerId=" + customerId
-					+ ", pwd=" + pwd + ", showName=" + showName + ", trueName="
-					+ trueName + ", registerTime=" + registerTime + "]";
-		}
-		
-		
+public class CustomerModel {
+	  private Integer uuid;
+
+	    private String customerid;
+
+	    private String pwd;
+
+	    private String showname;
+
+	    private String truename;
+
+	    private String registertime;
+
+	    public Integer getUuid() {
+	        return uuid;
+	    }
+
+	    public void setUuid(Integer uuid) {
+	        this.uuid = uuid;
+	    }
+
+	    public String getCustomerid() {
+	        return customerid;
+	    }
+
+	    public void setCustomerid(String customerid) {
+	        this.customerid = customerid == null ? null : customerid.trim();
+	    }
+
+	    public String getPwd() {
+	        return pwd;
+	    }
+
+	    public void setPwd(String pwd) {
+	        this.pwd = pwd == null ? null : pwd.trim();
+	    }
+
+	    public String getShowname() {
+	        return showname;
+	    }
+
+	    public void setShowname(String showname) {
+	        this.showname = showname == null ? null : showname.trim();
+	    }
+
+	    public String getTruename() {
+	        return truename;
+	    }
+
+	    public void setTruename(String truename) {
+	        this.truename = truename == null ? null : truename.trim();
+	    }
+
+	    public String getRegistertime() {
+	        return registertime;
+	    }
+
+	    public void setRegistertime(String registertime) {
+	        this.registertime = registertime == null ? null : registertime.trim();
+	    }
 		
 }
