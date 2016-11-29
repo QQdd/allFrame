@@ -16,7 +16,7 @@ import com.family.framework.customer.vo.CustomerModel;
 @RequestMapping(value="/customer")
 public class CustomerController {
 	@Autowired
-	private ICustomerService cuistomerService = null;
+	private ICustomerService cuistomerService;
 	
 /*	@RequestMapping(value="toAdd",method=RequestMethod.GET)
 	public String toAdd(){
@@ -74,21 +74,16 @@ public class CustomerController {
 		return "customer/list";
 	}*/
 	
-	@RequestMapping(value="toList",method=RequestMethod.GET) //该方法的页面 相当于/struts配置文件
+	@RequestMapping(value="toList",method=RequestMethod.GET)//该方法的页面 相当于/struts配置文件
 	    public ModelAndView toList()throws Exception{  
 	        ModelAndView modelAndView = new ModelAndView();  
-	  
 	        //调用service方法查询用户数据 
 	       List<CustomerModel> customerModel = cuistomerService.getByCustomerId();
 	        //将得到的用户列表内容添加到ModelAndView中  
 	     modelAndView.addObject("customerModel",customerModel);  
 	        //设置响应的jsp页面
-	      modelAndView.setViewName("/findCustomerList");  
+	      modelAndView.setViewName("customer/findCustomerList");  
 	  
 	        return modelAndView;  
 	    }  
-	@RequestMapping(value="toQuery",method=RequestMethod.GET)
-	public String toQuery(){
-		return "customer/query";
-	}	
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.family.framework.customer.vo.CustomerModel;
 import com.family.framework.customer.vo.Tb1CustomerExample;
 
-@Repository  //如果想用xml扫描就注解
+
 public interface CustomerDAO{
 	 int countByExample(Tb1CustomerExample example);
 

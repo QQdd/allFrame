@@ -47,17 +47,7 @@
 			<artifactId>asm</artifactId>
 			<version>3.3.1</version>
 		</dependency>
-		<!-- Springmvc相关jar -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>4.3.3.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>4.3.4.RELEASE</version>
-		</dependency>
+		
 		<!-- 注解 -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -106,6 +96,17 @@
     <artifactId>spring-aop</artifactId>
     <version>4.3.4.RELEASE</version>
 </dependency>
+<!-- Springmvc相关jar -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>4.3.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.3.3.RELEASE</version>
+		</dependency>
  <!--c3p0-->  
        <dependency>
     <groupId>com.mchange</groupId>
@@ -113,18 +114,7 @@
     <version>0.9.5.2</version>
 </dependency>
           <!--servlet/jsp api start-->  
-        <dependency>  
-            <groupId>javax.servlet</groupId>  
-            <artifactId>servlet-api</artifactId>  
-            <version>2.5</version>  
-        </dependency>  
-  
-        <dependency>  
-            <groupId>javax.servlet.jsp</groupId>  
-            <artifactId>jsp-api</artifactId>  
-            <version>2.1</version>  
-            <scope>provided</scope>  
-        </dependency>  
+ 
 		<!-- mybatis jar -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
@@ -202,5 +192,28 @@
 	
   <build>
     <finalName>framework-customerweb</finalName>
+    
+    <plugins>
+    <plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.21</version>
+
+				<configuration>
+
+					<!-- 添加这行<webDefaultXml>src/main/resources/jetty/webdefault.xml</webDefaultXml> -->
+					<!--可以边修改边访问 -->
+
+					<!-- <webAppSourceDirectory>src/main/webapp</webAppSourceDirectory> -->
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<contextPath>/jsp</contextPath>
+					<connectors>
+						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+							<port>8080</port>
+						</connector>
+					</connectors>
+				</configuration>
+			</plugin>
+			</plugins>
   </build>
 </project>
