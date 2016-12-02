@@ -15,15 +15,15 @@
 		</tr>
 		<tr>
 			<td>客户编号</td>
-			<td><input type="text" name="customerId" class="input"></td>
+			<td><input type="text" name="customerid" class="input"></td>
 			<td>客户密码</td>
 			<td><input type="text" name="pwd" class="input"></td>
 		</tr>
 		<tr>
 			<td>显示名称</td>
-			<td><input type="text" name="showName" class="input"></td>			
+			<td><input type="text" name="showname" class="input"></td>			
 			<td>真实姓名</td>
-			<td><input type="text" name="trueName" class="input"></td>
+			<td><input type="text" name="truename" class="input"></td>
 		</tr>		
 		<tr>
 			<td colspan=4 align=center><input type="submit" value="新增" class="button"></td>

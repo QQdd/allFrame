@@ -129,10 +129,13 @@
 		</dependency>
 		<!-- 数据库jar -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>6.0.5</version>
-		</dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.6</version>
+</dependency>
+
+		
+		
 		<!-- 连接池jar -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -206,7 +209,7 @@
 
 					<!-- <webAppSourceDirectory>src/main/webapp</webAppSourceDirectory> -->
 					<scanIntervalSeconds>10</scanIntervalSeconds>
-					<contextPath>/jsp</contextPath>
+					<contextPath>/</contextPath>
 					<connectors>
 						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
 							<port>8080</port>

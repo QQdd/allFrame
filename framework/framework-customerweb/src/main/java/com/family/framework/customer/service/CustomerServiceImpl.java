@@ -19,5 +19,24 @@ public class CustomerServiceImpl implements ICustomerService{
 		Tb1CustomerExample example=new Tb1CustomerExample();
 		return customerDAO.selectByExample(example);
 	}
+
+	public void create(CustomerModel cm) {
+		customerDAO.insert(cm);
+	}
+
+	public CustomerModel getByUuid(int customerUuid) {
+		return customerDAO.selectByPrimaryKey(customerUuid);
+	}
+
+	public void update(CustomerModel cm) {
+		customerDAO.updateByPrimaryKey(cm);
+	}
+
+	public void delete(int customerUuid) {
+		customerDAO.deleteByPrimaryKey(customerUuid);
+		
+	}
+	
+	
 	
 }

@@ -43,5 +43,5 @@
               <property name="basePackage" value="com.family.framework.customer.dao"/>  
               <property name="sqlSessionFactoryBeanName" value="sqlSession"/>  
        </bean>  
-  
+ 
 </beans>  

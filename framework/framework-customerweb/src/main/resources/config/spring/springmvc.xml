@@ -5,6 +5,9 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"  
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">  
   
+  
+  	<!-- 相当与struts的作用吧 -->
+  	  
        <!--自动扫描控制器-->  
        <context:component-scan base-package="com.family.framework.customer.web"/>  
        <!--视图渲染（其实就是导向到具体的文件夹）  -->  
@@ -12,6 +15,7 @@
               <property name="prefix" value="/WEB-INF/jsp/"/>  
               <property name="suffix" value=".jsp"/>  
        </bean>  
+       <mvc:resources mapping="/static/**" location="/WEB-INF/static/" />
        <!--控制器映射器和控制器适配器-->  
-       <mvc:annotation-driven></mvc:annotation-driven>  
+       <mvc:annotation-driven/>
 </beans>  
